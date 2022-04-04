@@ -36,6 +36,50 @@
 		    position:absolute;
 		}
     </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$.get('dataTerkini.json', function(obj){
+			// Pisahkan \n yang menjadi batas antar headline (newline)
+			var str = "<table border=1 class='table table-striped table-hover'>";
+
+			str+="<tr><td><b>No</b></td><td><b>Judul Headline</b></td><td><b>Kategori</b></td><td><b>Waktu Upload</b></td><td><b>Tanggal Scrapping</b></td></tr>";
+			$.each(obj, function(n, dataTerkini){
+				str+="<tr><td>"+(n+1)+"</td>";
+				str+="<td>"+dataTerkini.judul+"</td>";
+				str+="<td>"+dataTerkini.kategori+"</td>";
+				str+="<td>"+dataTerkini.waktu_publish+"</td>";
+				str+="<td>"+dataTerkini.waktu_scraping+"</td></tr>";
+			});
+			//Display semua headline ke html dengan id=headline_teks
+			str+="</table>";
+			$('#headline_teks').html(str);
+		});
+	});
+	</script>
+	<script type="text/javascript">
+	$(function(){
+		$.get('hasilscraping2.json', function(obj){
+			// Pisahkan \n yang menjadi batas antar headline (newline)
+			var str = "<table border=1 class='table table-striped table-hover'>";
+
+			str+="<tr><td><b>Rank</b></td><td><b>Poster</b></td><td><b>Title</b></td><td><b>Year</b></td><td><b>Director</b></td><td><b>Genre</b></td><td><b>Scraping Time</b></td></tr>";
+			$.each(obj, function(n, movielist){
+				str+="<tr><td>"+(n+1)+"</td>";
+				str+="<td><img src='"+movielist.Image+"'></td>";
+				str+="<td width='20%'>"+movielist.Title+"</td>";
+				str+="<td>"+movielist.Year+"</td>";
+				str+="<td>"+movielist.Director+"</td>";
+				str+="<td>"+movielist.Genre+"</td>";
+				str+="<td>"+movielist.Time+"</td>";
+				// str+="<td>"+movielist.waktu_scraping+"</td></tr>";
+			});
+			//Display semua headline ke html dengan id=headline_teks
+			str+="</table>";
+			$('#scraping').html(str);
+		});
+	});
+	</script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
@@ -55,9 +99,9 @@
 	          <li class="nav-item"><a href="#video-section" class="nav-link"><span>Video</span></a></li>
 	          <li class="nav-item"><a href="#maps-section" class="nav-link"><span>Maps</span></a></li>
 	          <!-- <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li> -->
+	          <li class="nav-item"><a href="#scraping-section" class="nav-link"><span>Data Scraping I</span></a></li>
+	          <li class="nav-item"><a href="#scraping2-section" class="nav-link"><span>Data Scraping II</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	          <li class="nav-item"><a href="https://ameliadewi19.github.io/datascraping1/" class="nav-link"><span>Data Scraping I</span></a></li>
-	          <li class="nav-item"><a href="https://ameliadewi19.github.io/ScrapingSelenium/" class="nav-link"><span>Data Scraping II</span></a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -393,6 +437,48 @@
 						</div>
 						<!--Google Maps-->
 					</a>
+				</div>
+    			
+			</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section" id="scraping-section">
+    	<div class="container-fluid px-md-5">
+    		<div class="row justify-content-center py-5 mt-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">This is data scraping I</h1>
+            <h2 class="mb-4">Data Scraping I</h2>
+            <p>This is my work for Data Scraping I from republica.com</p>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-1 text-center d-flex ftco-animate">
+    			</div>
+    			<div class="col-md-10 text-center d-flex ftco-animate">
+					<div id="headline_teks"></div>
+				</div>
+    			
+			</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section" id="scraping2-section">
+    	<div class="container-fluid px-md-5">
+    		<div class="row justify-content-center py-5 mt-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">This is data scraping 2</h1>
+            <h2 class="mb-4">Data Scraping II</h2>
+            <h3 class="mb-4">The Top 250 Movies of All Time</h3>
+            <p>This is my work for Data Scraping II</p>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-1 text-center d-flex ftco-animate">
+    			</div>
+    			<div class="col-md-10 text-center d-flex ftco-animate">
+					<center><h1></h1></center>
+					<div id="scraping"></div>
 				</div>
     			
 			</div>

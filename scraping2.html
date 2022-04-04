@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Data Scraping II</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$.get('hasilscraping.json', function(obj){
+			// Pisahkan \n yang menjadi batas antar headline (newline)
+			var str = "<table border=1 class='table table-striped table-hover'>";
+
+			str+="<tr><td><b>Rank</b></td><td><b>Poster</b></td><td><b>Title</b></td><td><b>Year</b></td><td><b>Director</b></td><td><b>Genre</b></td><td><b>Scraping Time</b></td></tr>";
+			$.each(obj, function(n, movielist){
+				str+="<tr><td>"+(n+1)+"</td>";
+				str+="<td><img src='"+movielist.Image+"'></td>";
+				str+="<td width='20%'>"+movielist.Title+"</td>";
+				str+="<td>"+movielist.Year+"</td>";
+				str+="<td>"+movielist.Director+"</td>";
+				str+="<td>"+movielist.Genre+"</td>";
+				str+="<td>"+movielist.Time+"</td>";
+				// str+="<td>"+movielist.waktu_scraping+"</td></tr>";
+			});
+			//Display semua headline ke html dengan id=headline_teks
+			str+="</table>";
+			$('#scraping').html(str);
+		});
+	});
+	</script>
+    <style type="text/css">
+    	.map-responsive{
+    		overflow:hidden;
+    		padding-bottom:56.25%;
+    		position:relative;
+    		height:0;
+		}
+		.map-responsive iframe{
+    		left:0;
+    		top:0;
+    		height:100%;
+    		width:100%;
+		    position:absolute;
+		}
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"><span>A</span>melia</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#video-section" class="nav-link"><span>Video</span></a></li>
+	          <li class="nav-item"><a href="#maps-section" class="nav-link"><span>Maps</span></a></li>
+	          <!-- <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li> -->
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	          <li class="nav-item"><a href="https://ameliadewi19.github.io/datascraping1/" class="nav-link"><span>Data Scraping I</span></a></li>
+	          <li class="nav-item"><a href="scraping2.html" class="nav-link"><span>Data Scraping II</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section class="hero-wrap js-fullheight">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
+          <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
+			<center><h1>The Top 250 Movies of All Time</h1></center>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section" id="video-section">
+    		<div class="row">
+    			<div class="col-md-1 text-center d-flex ftco-animate">
+    			</div>
+    			<div class="col-md-10 text-center d-flex ftco-animate">
+					<div id="scraping"></div>
+				</div>
+			</div>
+    	</div>
+    </section>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
