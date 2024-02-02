@@ -21,6 +21,21 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+          box-shadow: 0 0 0 2px grey;
+          border-radius: 50%; 
+      }
+
+      /* Atau menggunakan background dan padding untuk efek serupa */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+          background-color: grey; /* Warna latar belakang */
+          padding: 5px; /* Jarak antara edge ikon dan 'border' */
+          border-radius: 50%; 
+      }
+    </style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
@@ -67,25 +82,177 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
-            <div class="project">
-              <img src="images/portofolio/wabs.png" class="img-fluid mb-3" alt="Project Image" style="height: 300px; width: 100%; object-fit: cover;">
-                <h4><a href="#">WABS (Whatsapp Broadcast Scheduler)</a></h4>
-                <p>WABS, singkatan dari WhatsApp Broadcast Scheduler, adalah aplikasi inovatif untuk meningkatkan interaksi pengguna melalui WhatsApp. Dengan desain intuitif dan fungsionalitas canggih, WABS memungkinkan pengguna merencanakan dan mengirim pesan broadcast langsung atau terjadwal.</p>
+          <div class="col-md-6 mb-5">
+            <div id="projectCarousel1" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/portofolio/wabs1.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Projek WABS</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/portofolio/wabs2.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Halaman Login</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/portofolio/wabs3.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Halaman Dashboard</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/portofolio/wabs4.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Meminta QR Autentikasi WhatsApp</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/portofolio/wabs5.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Mendapat QR Autentikasi WhatsApp</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/portofolio/wabs6.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Group Recipient</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/portofolio/wabs7.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Mengirim Direct Message</p>
+                      </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#projectCarousel1" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#projectCarousel1" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
+            <h4>WABS (Whatsapp Broadcast Scheduler)</h4>
+            <p style="font-size: 10pt;">WABS, singkatan dari WhatsApp Broadcast Scheduler, adalah aplikasi inovatif untuk meningkatkan interaksi pengguna melalui WhatsApp. Dengan desain intuitif dan fungsionalitas canggih, WABS memungkinkan pengguna merencanakan dan mengirim pesan broadcast langsung atau terjadwal.</p>
+            <p style="font-size: 10pt;">Teknologi: </p>
+            <ul style="font-size: 10pt;">
+              <li>Frontend: ReactJS</li>
+              <li>Backend: Laravel</li>
+              <li>Database: MySQL</li>
+              <li>Library: whatsapp-web.js, node-cron</li>
+            </ul>
+            <p style="font-size: 10pt;">Link repository: <a href="https://github.com/ameliadewi19/WABS">https://github.com/ameliadewi19/WABS</a></p>
+            <p style="font-size: 10pt;">Link manual book: <a href="https://drive.google.com/file/d/1HkSgOZwiFBO56s5JE_2cU45NV_t2LP76/view?usp=sharing">https://drive.google.com/file/d/1HkSgOZwiFBO56s5JE_2cU45NV_t2LP76/view?usp=sharing</a></p>
           </div>
-          <div class="col-md-6">
-            <div class="project">
-              <img src="images/portofolio/tiktok.png" class="img-fluid mb-3" alt="Project Image" style="height: 300px; width: 100%; object-fit: cover;">
-                <h4><a href="#">Your Influensah (Tiktok Influencer Popularity Prediction) </a></h4>
-                <p>Sistem ini digunakan untuk memprediksi kepopuleran influencer di platform TikTok yang terdiri dari engagement rate, follower, following, like, comment, views dan shares</p>
+          <div class="col-md-6 mb-5">
+            <div id="projectCarousel2" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/portofolio/tiktok1.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Dashboard</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/portofolio/tiktok2.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Detail Influencer</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/portofolio/tiktok3.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Prediksi Kepopuleran Influencer</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/portofolio/tiktok4.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Halaman Campaign</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/portofolio/tiktok5.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Seluruh Data Statistik Influencer</p>
+                      </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#projectCarousel2" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#projectCarousel2" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-          </div>  
+            <h4>Your Influensah (TikTok Influencer Popularity Prediction)</h4>
+            <p style="font-size: 10pt;">Sistem ini digunakan untuk memprediksi kepopuleran Influencer di platform TikTok yang terdiri dari follower, following, like, views, comments dan engagement rate.</p>
+            <p style="font-size: 10pt;">Teknologi: </p>
+            <ul style="font-size: 10pt;">
+              <li>Bahasa: Python</li>
+              <li>Database: MongoDB</li>
+              <li>Library: Scikit-learn, Pandas, Numpy, Matplotlib, Seaborn, Pymongo, Flask, apsscheduler</li>
+            </ul>
+            <p style="font-size: 10pt;">Link repository: <a href="https://github.com/ameliadewi19/TiktokInfluencerPopularityPrediction">https://github.com/ameliadewi19/TiktokInfluencerPopularityPrediction</a></p>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div id="projectCarousel3" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/portofolio/editor1.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Dashboard</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/portofolio/editor2.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Filter grayscale</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/portofolio/editor3.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Split gambar</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/portofolio/editor4.png" class="d-block w-100" alt="Project Image 1" style="height: 280px; object-fit: cover;">
+                      <div class="image-caption text-center" style="background-color: gray; color: white; font-size: 10pt;">
+                          <p>Game card</p>
+                      </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#projectCarousel3" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#projectCarousel3" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <h4>ImageProcessing (Web Pengolahaan Gambar)</h4>
+            <p style="font-size: 10pt;">Web ini digunakan untuk melakukan pengolahan citra digital (gambar). Terdapat beberapa fitur seperti filter yang beragam, game dan number recognition</p>
+            <p style="font-size: 10pt;">Teknologi: </p>
+            <ul style="font-size: 10pt;">
+              <li>Bahasa: Python</li>
+              <li>Library: Flask, Numpy, Pillow, Matplotlib, Opencv</li>
+            </ul>
+            <p style="font-size: 10pt;">Link repository: <a href="https://github.com/ameliadewi19/ImageProcessing-Flask">https://github.com/ameliadewi19/ImageProcessing-Flask</a></p>
+          </div>
         </div>
       </div>
     </section>
     
-    <footer class="ftco-footer ftco-section" style="margin-top: 100px;">
+    <footer class="ftco-footer ftco-section">
       <div class="container">
         <!-- <div class="row mb-5">
           <div class="col-md">
